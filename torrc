@@ -1,0 +1,21 @@
+## Configuration file for Tor - XENO BRUTE Kali Version
+## Optimized for background execution
+
+# Tor opens a socks proxy on port 9050 by default
+SocksPort 9050
+
+# Logs go to syslog by default on Kali
+Log notice syslog
+
+# Start the process in the background
+RunAsDaemon 1
+
+# Control port for scripts to manage Tor (if needed)
+ControlPort 9051
+
+# Entry policies (allow local connections)
+SocksPolicy accept 127.0.0.1
+SocksPolicy reject *
+
+# Data directory for Kali
+DataDirectory /var/lib/tor
